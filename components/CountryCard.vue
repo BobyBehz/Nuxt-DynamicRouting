@@ -2,12 +2,13 @@
     <li v-for="country in countries" :key="country.cca3" class="countries-item basis-1/4 text-center block">
         <div class="p-5">
             <Nuxt-Link class="link" :to="{
-                name: 'name-image-borders-country',
+                name: 'name-image',
                 params: {
                     name: country.name.common,
                     image: country.flags.png,
-                    borders: 'naniii',
-                    country: country
+                },
+                query: {
+                    borders: country.borders
                 }
             }">
                 <div class="rounded-xl border-2 border-orange-300">
@@ -23,7 +24,6 @@
 const props = defineProps({
     countries: Object,
 })
-
 </script>
 
 <style scoped>
