@@ -1,8 +1,8 @@
 <template>
     <div class="container">
         <div class="w-full text-center">
-            <img class="w-[500px] aspect-[1.5] mx-auto mt-10" :src="country.image" alt="">
-            <h2 class="text-lg font-semibold mt-3">{{ country.name }}</h2>
+            <img class="w-[500px] aspect-[1.5] mx-auto mt-10" :src="countryInfo.image" alt="">
+            <h2 class="text-lg font-semibold mt-3">{{ countryInfo.name }}</h2>
         </div>
         <div class="text-center mt-20">
             <h3 class="text-xl font-bold">Neighbour countries</h3>
@@ -14,6 +14,6 @@
 </template>
 
 <script setup>
-const country = useRoute().params
-console.log(country)
+const countryInfo = useRoute().params
+console.log(countryInfo)
 </script>

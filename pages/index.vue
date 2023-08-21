@@ -16,5 +16,4 @@ const getCountries = async (query) => {
     countries.value = await response.json();
 }
 getCountries()
-
 </script>
